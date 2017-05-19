@@ -1,0 +1,18 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Press Start 2P', cursive;
+}
+h1{
+  margin:0
+}
+.titleMargin{
+  margin-left: 72px;
+}

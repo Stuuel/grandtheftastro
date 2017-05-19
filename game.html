@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Grand Theft Astro ist ein Textbasiertes Spiel.">
+    <meta name="author" content="Ismail Bünül">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/game_style.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+    <div id="home"></div>
+    <div id="journey">
+      <div id="stats-area">
+        <div class="stat">Tag <span id="stat-day" class="stat-value"></span></div>
+        <div class="stat">Distanz <span id="stat-distance" class="stat-value"></span></div>
+        <div class="stat">Crew <span id="stat-crew" class="stat-value"></span></div>
+        <div class="stat">Pferde <span id="stat-oxen" class="stat-value"></span></div>
+        <div class="stat">Lebensmittel <span id="stat-food" class="stat-value"></span></div>
+        <div class="stat">BeansCoin <span id="stat-money" class="stat-value"></span></div>
+        <div class="stat">Laserkraft <span id="stat-firepower" class="stat-value"></span></div>
+        <div class="stat">Gewicht <span id="stat-weight" class="stat-value"></span><span id="stat-capacity" class="stat-value"></span></div>
+      </div>
+      <div class="updates-area" id="updates-area"></div>
+      <div id="shop" class="hidden">
+        <div id="prods">
+        </div>
+        <button>Ciao C0RLL30N3</button>
+      </div>
+      <div id="attack" class="hidden">
+        <div id="attack-description"></div>
+        <button id="fight">Kämpfen</button>
+        <button id="runaway">Abhauen</button>
+      </div>
+      <div id="progress-area">
+        <img id="caravan" src="assets/caravan.png" />
+        <img id="trees" src="assets/trees.png" />
+      </div>
+    </div>
+
+    <div id="event"></div>
+  </div>
+  <!-- /.container -->
+
+  <!-- jQuery Version 1.11.1 -->
+  <script src="scripts/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="scripts/bootstrap.min.js"></script>
+
+  <script src="scripts/Events.js"></script>
+  <script src="scripts/Mafia.js"></script>
+  <script src="scripts/UI.js"></script>
+  <script src="scripts/Game.js"></script>
+  </body>
+
+  </html>
