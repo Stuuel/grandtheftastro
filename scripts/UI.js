@@ -4,7 +4,7 @@ MafiaH.UI = {};
 
 //show a notification in the message area
 MafiaH.UI.notify = function(message, type){
-  document.getElementById('updates-area').innerHTML = '<div class="update-' + type + '">Day '+ Math.ceil(this.caravan.day) + ': ' + message+'</div>' + document.getElementById('updates-area').innerHTML;
+  document.getElementById('updates-area').innerHTML = '<div class="update-' + type + '">Tag '+ Math.ceil(this.caravan.day) + ': ' + message+'</div><hr>' + document.getElementById('updates-area').innerHTML;
 };
 
 //refresh visual caravan stats
@@ -80,7 +80,7 @@ MafiaH.UI.showShop = function(products){
 MafiaH.UI.buyProduct = function(product) {
   //check we can afford it
   if(product.price > MafiaH.UI.caravan.money) {
-    MafiaH.UI.notify('Not enough money', 'negative');
+    MafiaH.UI.notify('Nicht genügend BeansCoin', 'negative');
     return false;
   }
 
@@ -88,7 +88,7 @@ MafiaH.UI.buyProduct = function(product) {
 
   MafiaH.UI.caravan[product.item] += +product.qty;
 
-  MafiaH.UI.notify('Bought ' + product.qty + ' x ' + product.item, 'positive');
+  MafiaH.UI.notify('Gekauft ' + product.qty + ' x ' + product.item, 'positive');
 
   //update weight
   MafiaH.UI.caravan.updateWeight();
@@ -110,7 +110,7 @@ MafiaH.UI.showAttack = function(firepower, gold) {
   this.gold = gold;
 
   //show firepower
-  document.getElementById('attack-description').innerHTML = 'Firepower: ' + firepower;
+  document.getElementById('attack-description').innerHTML = 'Waffen: ' + firepower;
 
   //init once
   if(!this.attackInitiated) {
@@ -137,12 +137,12 @@ MafiaH.UI.fight = function(){
   if(damage < this.caravan.crew) {
     this.caravan.crew -= damage;
     this.caravan.money += gold;
-    this.notify(damage + ' people were killed fighting', 'negative');
-    this.notify('Found $' + gold, 'gold');
+    this.notify(damage + ' Crew Mitglieder gestorben', 'negative');
+    this.notify('Ihr findet $' + gold, 'gold');
   }
   else {
     this.caravan.crew = 0;
-    this.notify('Everybody died in the fight', 'negative');
+    this.notify('Alle sind im Kampf gefallen', 'negative');
   }
 
   //resume journey
@@ -160,11 +160,11 @@ MafiaH.UI.runaway = function(){
   //check there are survivors
   if(damage < this.caravan.crew) {
     this.caravan.crew -= damage;
-    this.notify(damage + ' people were killed running', 'negative');
+    this.notify(damage + ' Crew Mitglieder sind bei der Flucht gestorben', 'negative');
   }
   else {
     this.caravan.crew = 0;
-    this.notify('Everybody died running away', 'negative');
+    this.notify('Alle sind beim flüchten gestorben', 'negative');
   }
 
   //remove event listener

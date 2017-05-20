@@ -58,7 +58,7 @@ MafiaH.Game.init = function(){
 MafiaH.Game.startJourney = function() {
   this.gameActive = true;
   this.previousTime = null;
-  this.ui.notify('A great adventure begins', 'positive');
+  this.ui.notify('Das gleissende Licht der aufgehenden Sonne blendet dich, los geht das Abenteuer.', 'positive');
 
   this.step();
 };
@@ -94,7 +94,7 @@ MafiaH.Game.updateGame = function() {
   this.caravan.consumeFood();
 
   if(this.caravan.food === 0) {
-    this.ui.notify('Your caravan starved to death', 'negative');
+    this.ui.notify('Ihr seid alle verhungert. Keine Lebensmittel mehr', 'negative');
     this.gameActive = false;
     return;
   }
@@ -111,14 +111,14 @@ MafiaH.Game.updateGame = function() {
   //check if everyone died
   if(this.caravan.crew <= 0) {
     this.caravan.crew = 0;
-    this.ui.notify('Everyone died', 'negative');
+    this.ui.notify('Alle sind gestorben', 'negative');
     this.gameActive = false;
     return;
   }
 
   //check win game
   if(this.caravan.distance >= MafiaH.FINAL_DISTANCE) {
-    this.ui.notify('You have returned home!', 'positive');
+    this.ui.notify('Ihr habt die Siedlung erreicht. Wie es weiter geht erfahrt ihr in Episode 2 für nur 39.99$', 'positive');
     this.gameActive = false;
     return;
   }

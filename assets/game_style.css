@@ -9,6 +9,7 @@ body {
   height: 100%;
   overflow: hidden;
   font-family: Courier;
+  background: #2e2e2e url("background/background.png") no-repeat fixed center;
 }
 
 .hidden {
@@ -21,7 +22,6 @@ body {
 
 #journey {
   height: 100%;
-  background-color: #5F9FFF;
 }
 
 #event {
@@ -29,9 +29,8 @@ body {
 }
 
 #progress-area {
-  float: left;
   position: relative;
-  width: 400px;
+  width: 566px;
   margin: 10px;
 }
 
@@ -70,8 +69,12 @@ body {
   height: 150px;
   padding: 10px;
   font-size: 10px;
+  line-height: 15px;
   font-family: 'Press Start 2P', cursive;
   overflow-y: scroll;
+}
+#updates-area::-webkit-scrollbar {
+    display: none;
 }
 
 .update-positive {
@@ -88,7 +91,7 @@ body {
 
 #shop {
   float: left;
-  background-color: white;
+  background-color: black;
   margin: 10px;
   padding: 10px;
   height: 90px;
@@ -98,22 +101,57 @@ body {
 .product {
   float: left;
   margin: 5px;
-  padding: 2px;
-  border: 1px solid black;
+  padding: 5px;
+  border: 1px solid white;
   font-size: 12px;
+  color:#ffffff;
+  cursor: pointer;
+}
+.product:hover{
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
 }
 
 #shop button {
   clear: both;
   float: left;
   margin: 5px;
+  background: none;
+  border: 1px solid #f5f5f5;
+  color: #fff;
+  cursor: pointer;
+}
+#shop button:hover{
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
 }
 
 #attack {
   float: left;
-  background-color: white;
+  background-color: #000000;
   margin: 10px;
   padding: 10px;
   height: 60px;
   width: 150px;
+}
+#attack-description{
+  color:#ffffff;
+  margin-bottom: 10px;
+}
+#attack button {
+  clear: both;
+  background: none;
+  border: 1px solid #f5f5f5;
+  color: #fff;
+  cursor: pointer;
+}
+#attack button:hover{
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
 }

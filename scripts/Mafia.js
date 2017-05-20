@@ -32,7 +32,7 @@ MafiaH.Caravan.updateWeight = function(){
   }
 
   if(droppedGuns) {
-    this.ui.notify('Left '+droppedGuns+' guns behind', 'negative');
+    this.ui.notify('Du hast '+droppedGuns+' Waffen verloren', 'negative');
   }
 
   while(this.food && this.capacity <= this.weight) {
@@ -42,7 +42,7 @@ MafiaH.Caravan.updateWeight = function(){
   }
 
   if(droppedFood) {
-    this.ui.notify('Left '+droppedFood+' food provisions behind', 'negative');
+    this.ui.notify('Du hast  '+droppedFood+' Lebensmittel verloren', 'negative');
   }
 };
 

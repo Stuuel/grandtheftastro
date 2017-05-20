@@ -8,61 +8,61 @@ MafiaH.Event.eventTypes = [
     notification: 'negative',
     stat: 'crew',
     value: -3,
-    text: 'Food intoxication. Casualties: '
+    text: 'Lebensmittel Vergiftung. Anzahl Opfer: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'negative',
     stat: 'crew',
     value: -4,
-    text: 'Flu outbreak. Casualties: '
+    text: 'Die Grippe ist ausgebrochen. Anzahl Opfer: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'negative',
     stat: 'food',
     value: -10,
-    text: 'Worm infestation. Food lost: '
+    text: 'Deine Lebensmittel wurden von würmer angegriffen. Lebensmittel verloren: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'negative',
     stat: 'money',
     value: -50,
-    text: 'Pick pockets steal $'
+    text: 'Diebe haben dir Geld abgenommen $'
   },
   {
     type: 'STAT-CHANGE',
     notification: 'negative',
     stat: 'oxen',
     value: -1,
-    text: 'Ox flu outbreak. Casualties: '
+    text: 'Pferde Virus ist ausgebrochen. Anzahl Opfer: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'positive',
     stat: 'food',
     value: 20,
-    text: 'Found wild berries. Food added: '
+    text: 'Wilde Bohnen gefunden, sehen gut aus. Lebensmittel hinzugefügt: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'positive',
     stat: 'food',
     value: 20,
-    text: 'Found wild berries. Food added: '
+    text: 'Wilde Bohnen gefunden, wieso sollte man die nicht essen? Lebensmittel hinzugefügt: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'positive',
     stat: 'oxen',
     value: 1,
-    text: 'Found wild oxen. New oxen: '
+    text: 'Wildes Pferd gezähmt. Anzahl Pferde: '
   },
   {
     type: 'SHOP',
     notification: 'neutral',
-    text: 'You have found a shop',
+    text: 'Ein E-BEA Bot erscheint, wie kann ich behilflich sein?',
     products: [
       {item: 'food', qty: 20, price: 50},
       {item: 'oxen', qty: 1, price: 200},
@@ -73,7 +73,7 @@ MafiaH.Event.eventTypes = [
   {
     type: 'SHOP',
     notification: 'neutral',
-    text: 'You have found a shop',
+    text: 'Ein E-BEA Bot erscheint, wie kann ich behilflich sein?',
     products: [
       {item: 'food', qty: 30, price: 50},
       {item: 'oxen', qty: 1, price: 200},
@@ -84,7 +84,7 @@ MafiaH.Event.eventTypes = [
   {
     type: 'SHOP',
     notification: 'neutral',
-    text: 'Smugglers sell various goods',
+    text: 'Schmuggler verkaufen heisse Ware.',
     products: [
       {item: 'food', qty: 20, price: 60},
       {item: 'oxen', qty: 1, price: 300},
@@ -95,17 +95,17 @@ MafiaH.Event.eventTypes = [
   {
     type: 'ATTACK',
     notification: 'negative',
-    text: 'Bandits are attacking you'
+    text: 'Banditen greifen dich an.'
   },
   {
     type: 'ATTACK',
     notification: 'negative',
-    text: 'Bandits are attacking you'
+    text: 'Banditen überfallen dich aus dem Hinterhalt.'
   },
   {
     type: 'ATTACK',
     notification: 'negative',
-    text: 'Bandits are attacking you'
+    text: 'Bonjwa Banditen greifen dich an.'
   }
 ];
 
