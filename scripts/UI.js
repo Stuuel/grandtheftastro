@@ -4,7 +4,7 @@ MafiaH.UI = {};
 
 //show a notification in the message area
 MafiaH.UI.notify = function(message, type){
-  document.getElementById('updates-area').innerHTML = '<div class="update-' + type + '">Tag '+ Math.ceil(this.caravan.day) + ': ' + message+'</div><hr>' + document.getElementById('updates-area').innerHTML;
+  document.getElementById('updates-area').innerHTML = '<div class="update-' + type + '">Day '+ Math.ceil(this.caravan.day) + ': ' + message+'</div>' + document.getElementById('updates-area').innerHTML;
 };
 
 //refresh visual caravan stats
@@ -46,7 +46,7 @@ MafiaH.UI.showShop = function(products){
       }
       else if(target.tagName == 'DIV' && target.className.match(/product/)) {
 
-        console.log('buying')
+        //console.log('buying')
 
         var bought = MafiaH.UI.buyProduct({
           item: target.getAttribute('data-item'),
@@ -110,7 +110,7 @@ MafiaH.UI.showAttack = function(firepower, gold) {
   this.gold = gold;
 
   //show firepower
-  document.getElementById('attack-description').innerHTML = 'Laserkraft: ' + firepower;
+  document.getElementById('attack-description').innerHTML = 'Firepower: ' + firepower;
 
   //init once
   if(!this.attackInitiated) {
@@ -137,12 +137,12 @@ MafiaH.UI.fight = function(){
   if(damage < this.caravan.crew) {
     this.caravan.crew -= damage;
     this.caravan.money += gold;
-    this.notify(damage + ' sind beim Kampf gefallen', 'negative');
+    this.notify(damage + ' people were killed fighting', 'negative');
     this.notify('Found $' + gold, 'gold');
   }
   else {
     this.caravan.crew = 0;
-    this.notify('Alle sind beim Kampf gefallen', 'negative');
+    this.notify('Everybody died in the fight', 'negative');
   }
 
   //resume journey
@@ -160,15 +160,15 @@ MafiaH.UI.runaway = function(){
   //check there are survivors
   if(damage < this.caravan.crew) {
     this.caravan.crew -= damage;
-    this.notify(damage + ' deiner Crew-Mitglieder sind beim flüchten gestorben', 'negative');
+    this.notify(damage + ' people were killed running', 'negative');
   }
   else {
     this.caravan.crew = 0;
-    this.notify('Alle sind beim flüchten gestorben.', 'negative');
+    this.notify('Everybody died running away', 'negative');
   }
 
   //remove event listener
-  document.getElementById('runaway').removeEventListener('click');
+  document.getElementById('runaway').removeEventListener('click',this.game.resumeJourney());
 
   //resume journey
   document.getElementById('attack').classList.add('hidden');

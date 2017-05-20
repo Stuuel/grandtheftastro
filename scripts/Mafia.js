@@ -18,7 +18,7 @@ MafiaH.Caravan.updateWeight = function(){
   var droppedGuns = 0;
 
   //how much can the caravan carry
-  this.capacity = this.oxen * MafiaH.WEIGHT_PER_HORSE + this.crew * MafiaH.WEIGHT_PER_PERSON;
+  this.capacity = this.oxen * MafiaH.WEIGHT_PER_OX + this.crew * MafiaH.WEIGHT_PER_PERSON;
 
   //how much weight do we currently have
   this.weight = this.food * MafiaH.FOOD_WEIGHT + this.firepower * MafiaH.FIREPOWER_WEIGHT;
@@ -32,7 +32,7 @@ MafiaH.Caravan.updateWeight = function(){
   }
 
   if(droppedGuns) {
-    this.ui.notify('Du hast '+droppedGuns+' Waffen verloren', 'negative');
+    this.ui.notify('Left '+droppedGuns+' guns behind', 'negative');
   }
 
   while(this.food && this.capacity <= this.weight) {
@@ -42,7 +42,7 @@ MafiaH.Caravan.updateWeight = function(){
   }
 
   if(droppedFood) {
-    this.ui.notify('Du hast '+droppedFood+' Lebensmittel verloren', 'negative');
+    this.ui.notify('Left '+droppedFood+' food provisions behind', 'negative');
   }
 };
 

@@ -8,104 +8,104 @@ MafiaH.Event.eventTypes = [
     notification: 'negative',
     stat: 'crew',
     value: -3,
-    text: 'Nahrungsmittelvergiftung. Opfer: '
+    text: 'Food intoxication. Casualties: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'negative',
     stat: 'crew',
     value: -4,
-    text: 'Weltraum Grippe ist ausgebrochen. Opfer: '
+    text: 'Flu outbreak. Casualties: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'negative',
     stat: 'food',
     value: -10,
-    text: 'Lebensmittel sind verdorben. Lebensmittel verloren: '
+    text: 'Worm infestation. Food lost: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'negative',
     stat: 'money',
     value: -50,
-    text: 'Taschendiebe bestehlen euch ihr verliert $'
+    text: 'Pick pockets steal $'
   },
   {
     type: 'STAT-CHANGE',
     notification: 'negative',
     stat: 'oxen',
     value: -1,
-    text: 'Pferde Grippe ist ausgebrochen. Opfer: '
+    text: 'Ox flu outbreak. Casualties: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'positive',
     stat: 'food',
     value: 20,
-    text: 'Wilde Weltraum Beeren gefunden. Wieso sollte man die auch nicht essen? Lebensmittel hinzugefügt: '
+    text: 'Found wild berries. Food added: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'positive',
     stat: 'food',
     value: 20,
-    text: 'Wilde Weltraum Beeren gefunden. Wieso sollte man die auch nicht essen? Lebensmittel hinzugefügt: '
+    text: 'Found wild berries. Food added: '
   },
   {
     type: 'STAT-CHANGE',
     notification: 'positive',
     stat: 'oxen',
     value: 1,
-    text: 'Wilde Alien Pferde gefunden, haben zwar nur drei Beine aber sind nicht zu unterschätzen. Neue Pferde: '
+    text: 'Found wild oxen. New oxen: '
   },
   {
     type: 'SHOP',
     notification: 'neutral',
-    text: 'Ein Droide mit dem Namen C0RLL30N3 bietet dir seine Dienste an',
+    text: 'You have found a shop',
     products: [
-      {item: 'Lebensmittel', qty: 20, price: 50},
-      {item: 'Pferde', qty: 1, price: 200},
-      {item: 'Laserpower', qty: 2, price: 50},
-      {item: 'Crew', qty: 5, price: 80}
+      {item: 'food', qty: 20, price: 50},
+      {item: 'oxen', qty: 1, price: 200},
+      {item: 'firepower', qty: 2, price: 50},
+      {item: 'crew', qty: 5, price: 80}
     ]
   },
   {
     type: 'SHOP',
     notification: 'neutral',
-    text: 'Ein Droide mit dem Namen C0RLL30N3 bietet dir seine Dienste an',
+    text: 'You have found a shop',
     products: [
-      {item: 'Lebensmittel', qty: 30, price: 50},
-      {item: 'Pferde', qty: 1, price: 200},
-      {item: 'Laserpower', qty: 2, price: 20},
-      {item: 'Crew', qty: 10, price: 80}
+      {item: 'food', qty: 30, price: 50},
+      {item: 'oxen', qty: 1, price: 200},
+      {item: 'firepower', qty: 2, price: 20},
+      {item: 'crew', qty: 10, price: 80}
     ]
   },
   {
     type: 'SHOP',
     notification: 'neutral',
-    text: 'Ein Schmugler ruft dich, ey pssssst! Gute Preise, Gute Besserung',
+    text: 'Smugglers sell various goods',
     products: [
-      {item: 'Lebensmittel', qty: 20, price: 60},
-      {item: 'Pferde', qty: 1, price: 300},
-      {item: 'Laserpower', qty: 2, price: 80},
-      {item: 'Crew', qty: 5, price: 60}
+      {item: 'food', qty: 20, price: 60},
+      {item: 'oxen', qty: 1, price: 300},
+      {item: 'firepower', qty: 2, price: 80},
+      {item: 'crew', qty: 5, price: 60}
     ]
   },
   {
     type: 'ATTACK',
     notification: 'negative',
-    text: 'Alien Banditen greifen dich an, einer hat was von Jimmy die Lippe'
+    text: 'Bandits are attacking you'
   },
   {
     type: 'ATTACK',
     notification: 'negative',
-    text: 'Banditen, die aussehen wie übergrosse Caneloni, greifen dich an'
+    text: 'Bandits are attacking you'
   },
   {
     type: 'ATTACK',
     notification: 'negative',
-    text: 'Alien Banditen wollen dir ans Leder.'
+    text: 'Bandits are attacking you'
   }
 ];
 

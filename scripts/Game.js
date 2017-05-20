@@ -1,7 +1,7 @@
 var MafiaH = MafiaH || {};
 
 //constants
-MafiaH.WEIGHT_PER_HORSE = 20;
+MafiaH.WEIGHT_PER_OX = 20;
 MafiaH.WEIGHT_PER_PERSON = 2;
 MafiaH.FOOD_WEIGHT = 0.6;
 MafiaH.FIREPOWER_WEIGHT = 5;
@@ -58,10 +58,9 @@ MafiaH.Game.init = function(){
 MafiaH.Game.startJourney = function() {
   this.gameActive = true;
   this.previousTime = null;
-  this.ui.notify('Das gleissende Licht der aufgehenden Sonne blendet dich, du machst dich auf den Weg.', 'positive');
-  setTimeout(function(){
-    MafiaH.Game.step();
-}, 2000);
+  this.ui.notify('A great adventure begins', 'positive');
+
+  this.step();
 };
 
 //game loop
@@ -95,7 +94,7 @@ MafiaH.Game.updateGame = function() {
   this.caravan.consumeFood();
 
   if(this.caravan.food === 0) {
-    this.ui.notify('Deine Crew ist verhungert', 'negative');
+    this.ui.notify('Your caravan starved to death', 'negative');
     this.gameActive = false;
     return;
   }
@@ -112,14 +111,14 @@ MafiaH.Game.updateGame = function() {
   //check if everyone died
   if(this.caravan.crew <= 0) {
     this.caravan.crew = 0;
-    this.ui.notify('Es sind alle gestorben', 'negative');
+    this.ui.notify('Everyone died', 'negative');
     this.gameActive = false;
     return;
   }
 
   //check win game
   if(this.caravan.distance >= MafiaH.FINAL_DISTANCE) {
-    this.ui.notify('Ihr seid in Sicherheit', 'positive');
+    this.ui.notify('You have returned home!', 'positive');
     this.gameActive = false;
     return;
   }
