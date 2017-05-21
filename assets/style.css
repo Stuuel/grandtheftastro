@@ -16,3 +16,7 @@ h1{
 .titleMargin{
   margin-left: 72px;
 }
+.lead{
+  font-size:13px;
+  margin-bottom:0;
+}
